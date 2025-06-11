@@ -45,7 +45,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex w-full h-screen text-white bg-[linear-gradient(45deg,#000000,#161722)] bg-[length:400%_400%] animate-[gradient_15s_ease_infinite]">
+      <div className="flex w-full h-screen text-white bg-[linear-gradient(45deg,#000000,#090a17)] bg-[length:400%_400%] animate-[gradient_15s_ease_infinite]">
         <div className="w-5/12">
           <Profile />
         </div>
