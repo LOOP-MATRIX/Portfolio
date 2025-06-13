@@ -37,12 +37,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="p-4 md:p-6">
-      <h2 className="text-4xl font-bold mb-4">Projects </h2>
+    <section className="p-2 md:p-6">
+      <h2 className="text-4xl font-bold mb-2">Projects </h2>
       <div className="space-y-4 ">
         {projects.map((proj, index) => (
           <div key={index} className="border hover:shadow-md   shadow-[rgb(77,85,122)] hover:border-[rgb(77,85,122)] border-gray-600 rounded-lg p-4 hover:bg-[#1b1b1b49] flex hover:scale-101 transition-all duration-300 ease-in-out">
-            <div className="w-[170px] h-[100px] flex-shrink-0 ">
+            <div className="w-[150px] h-[100px] flex-shrink-0 ">
               <img 
                 src={proj.img} 
                 alt={proj.title} 
