@@ -19,20 +19,7 @@ const Navbar = () => {
             About
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to="/education"
-            className={({ isActive }) =>
-              `px-2 py-1 transition-all duration-300 ease-in-out ${
-                isActive
-                  ? 'text-white text-[19px] drop-shadow-xl drop-shadow-blue-300'
-                  : 'text-gray-600 text-sm hover:drop-shadow-[0_8px_16px_rgba(59,130,246,0.4)]'
-              }`
-            }
-          >
-            Education
-          </NavLink>
-        </li>
+        
         <li>
           <NavLink
             to="/experience"
@@ -59,6 +46,20 @@ const Navbar = () => {
             }
           >
             Projects
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/education"
+            className={({ isActive }) =>
+              `px-2 py-1 transition-all duration-300 ease-in-out ${
+                isActive
+                  ? 'text-white text-[19px] drop-shadow-xl drop-shadow-blue-300'
+                  : 'text-gray-600 text-sm hover:drop-shadow-[0_8px_16px_rgba(59,130,246,0.4)]'
+              }`
+            }
+          >
+            Education
           </NavLink>
         </li>
       </ul>

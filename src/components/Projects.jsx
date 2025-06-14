@@ -5,13 +5,13 @@ import bachatgat from '../assets/bachatgat.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
-  {
-    title: "SafeArea",
-    img: null,
-    link: "#",
-    stack: ['React', 'Nodejs', 'MongoDB', 'TailwindCSS'],
-    description: "Developed a community-driven crime-reporting platform where users can post crime incidents with location and details. Other users can view these on a map to assess safety before relocating or buying property."
-  },
+  // {
+  //   title: "SafeArea",
+  //   img: null,
+  //   link: "#",
+  //   stack: ['React', 'Nodejs', 'MongoDB', 'TailwindCSS'],
+  //   description: "Developed a community-driven crime-reporting platform where users can post crime incidents with location and details. Other users can view these on a map to assess safety before relocating or buying property."
+  // },
   {
     title: "Mauli Business",
     img: mauli,
@@ -23,7 +23,7 @@ const projects = [
     title: "BachatGat",
     img: bachatgat,
     link: "https://bachatfrontend.codifyinstitute.org/",
-    stack: ['React.js', 'Node.js', 'MongoDB', 'JWT', 'Vercel'],
+    stack: ['React.js', 'Node.js', 'MongoDB', 'JWT'],
     description: "Created a rural loan platform for women SHGs with CRP onboarding, loan workflows, EMI tracking, and admin panel."
   },
   {
@@ -37,12 +37,12 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="p-2 md:p-6">
-      <h2 className="text-4xl font-bold mb-2">Projects </h2>
+    <section className="p-4 md:p-6 ">
+      <h2 className="text-4xl font-bold mb-4">Projects </h2>
       <div className="space-y-4 ">
         {projects.map((proj, index) => (
-          <div key={index} className="border hover:shadow-md  h-[140px] shadow-[rgb(77,85,122)] hover:border-[rgb(77,85,122)] border-gray-600 rounded-lg p-4 hover:bg-[#1b1b1b49] flex hover:scale-101 transition-all duration-300 ease-in-out">
-            <div className="w-[170px] h-[110px] flex-shrink-0 ">
+          <div key={index} className="border hover:shadow-md shadow-[rgb(77,85,122)] hover:border-[rgb(77,85,122)] border-gray-600 rounded-lg p-4 hover:bg-[#1b1b1b49] flex hover:scale-101 transition-all duration-300 ease-in-out">
+            <div className="w-[180px] h-[150px] flex-shrink-0 ">
               <img 
                 src={proj.img} 
                 alt={proj.title} 

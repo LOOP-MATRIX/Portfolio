@@ -1,12 +1,12 @@
 import React from 'react'
 import img from '../assets/react.svg'
 import { CiLocationOn } from "react-icons/ci";
-import { FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 import { MdFileDownload } from "react-icons/md";
 
-const Profile = () => {
+const Profile = ({setcontact}) => {
 
   let size = 22
 
@@ -31,14 +31,14 @@ const Profile = () => {
 
 
       <div className='flex gap-1 justify-center items-center  h-12 w-52 '>
-        <FaInstagram fontSize={size} className={styletl}/>
-        <AiOutlineLinkedin fontSize={size}  className={styletl}/>
-        <VscGithub fontSize={size} className={styletl}/>
+        <a href="mailto:omsutar1210@gmail.com"  target='_blank'><MdEmail fontSize={size} className={styletl}/></a>
+        <a href="https://www.linkedin.com/in/omkar-sutar-251656296/"  target='_blank'><AiOutlineLinkedin fontSize={size}  className={styletl}/></a>
+        <a href="https://github.com/LOOP-MATRIX" target='_blank'><VscGithub fontSize={size} className={styletl}/></a>
         <div className='border-r-1 h-3/5 mx-2'/>
         <button className='border border-gray-600 rounded-sm flex justify-center items-center px-2 py-1  hover:shadow-md hover:shadow-gray-600 hover:scale-103 transition-all duration-300 ease-in-out'><MdFileDownload /> Resume</button> 
       </div>
       <div>
-        <button className=' rounded-sm flex justify-center items-center px-2 py-1 bg-gray-900 hover:shadow-md hover:shadow-gray-600 hover:scale-103 hover:bg-gray-800 transition-all duration-300 ease-in-out'>Get In Touch</button>
+        <button onClick={()=>{setcontact(true)}} className=' rounded-sm flex justify-center items-center px-2 py-1 bg-gray-900 hover:shadow-md hover:shadow-gray-600 hover:scale-103 hover:bg-gray-800 transition-all duration-300 ease-in-out'>Get In Touch</button>
       </div>
     </div>
   )
