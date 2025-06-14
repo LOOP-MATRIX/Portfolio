@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
 import Profile from './Profile';
+import Spinner from './Spinner'
 
 const Home = () => {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ const Home = () => {
   const outletRef = useRef(null);
   const [lastScrollTime, setLastScrollTime] = useState(0);
   const [contact , setcontact ]=useState(false)
+  const [loading,setloading]=useState(false)
 
   // Handle scroll
   const routes = ['/', '/experience', '/projects', '/education'];
@@ -51,7 +53,7 @@ const Home = () => {
   };
 
   const handleSubmit = async (e) => {
-    console.log(formData)
+    setloading(true)
     e.preventDefault();
     try {
       const res = await fetch('http://localhost:5000/api/send-mail', {
@@ -63,13 +65,15 @@ const Home = () => {
       if (res.ok) {
         alert('Message sent!');
         setFormData({ name: '', email: '', message: '' });
+        setcontact(false)
       } else {
         alert('Failed to send message.');
       }
     } catch (err) {
       alert('Something went wrong.');
     }
-    setcontact(false)
+    setloading(false)
+    
   };
 
   return (
@@ -122,9 +126,15 @@ const Home = () => {
             />
             <button
               type="submit"
-              className="bg-blue-600 hover:bg-blue-700 transition-colors py-2 px-4 rounded text-white font-medium"
+              className="bg-blue-600 hover:bg-blue-700 transition-colors py-2 px-4 rounded text-white font-medium "
             >
-              Send
+              {
+                loading?(
+                  <div className='flex justify-center items-center'>
+                    <Spinner/>
+                  </div>
+                ):('save')
+              }
             </button>
           </form>
         </div>
