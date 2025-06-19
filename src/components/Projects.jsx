@@ -14,6 +14,7 @@ const projects = [
   // },
   {
     title: "Mauli Business",
+    ref:'codehub',
     img: mauli,
     link: "https://maulibusiness.com/",
     stack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'JWT'],
@@ -21,6 +22,7 @@ const projects = [
   },
   {
     title: "BachatGat",
+    ref:'codehub',
     img: bachatgat,
     link: "https://bachatfrontend.codifyinstitute.org/",
     stack: ['React.js', 'Node.js', 'MongoDB', 'JWT'],
@@ -28,6 +30,7 @@ const projects = [
   },
   {
     title: "School of Ayurveda",
+    ref:'codehub',
     img: ayurveda,
     link: "http://schoolofayurveda.in/",
     stack: ['React.js', 'Node.js', 'MongoDB', 'Tailwind CSS'],
@@ -37,28 +40,33 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="p-4 md:p-6 ">
-      <h2 className="text-4xl font-bold mb-4">Projects </h2>
+    <section className="p-4 md:p-6 w-full lg:w-7/9 xl:w-5/9 flex flex-col justify-center items-center">
+      <h2 className="text-4xl font-bold mb-8 ">Projects </h2>
       <div className="space-y-4 ">
         {projects.map((proj, index) => (
-          <div key={index} className="border hover:shadow-md shadow-[rgb(77,85,122)] hover:border-[rgb(77,85,122)] border-gray-600 rounded-lg p-4 hover:bg-[#1b1b1b49] flex hover:scale-101 transition-all duration-300 ease-in-out">
-            <div className="w-[180px] h-[150px] flex-shrink-0 ">
+          <div key={index} className="border hover:shadow-md shadow-[rgb(77,85,122)] hover:border-[rgb(77,85,122)] border-gray-600 rounded-lg p-4 hover:bg-[#1b1b1b49] flex flex-col gap-8 md:flex-row hover:scale-101 transition-all duration-300 ease-in-out">
+            <div className="w-full md:w-[180px] h-[150px] flex-shrink-0 ">
               <img 
                 src={proj.img} 
                 alt={proj.title} 
                 className='w-full h-full object-cover rounded'
               />
             </div>
-            <div className="ml-4 flex flex-col gap-1">
+            <div className="ml-4 flex flex-col justify-center gap-2">
               <div className='flex items-center gap-2'>
                 <p className='text-2xl font-semibold'>{proj.title}</p>
+                {
+                  proj.ref&&(
+                    <p className='text-md text-blue-400'>({proj.ref})</p>
+                  )
+                }
                 <a href={proj.link} target='_blank'><FaExternalLinkAlt fontSize={14}/></a>
                 </div>
-              <div className="text-sm text-white italic flex gap-2">{
+              <div className="text-sm text-white italic flex gap-2 ">{
                 proj.stack.map((item, index) => (
                   <span key={index} className='px-[8px] text-[12px] text-gray-200 py-[2px] bg-gray-800 rounded-xl'>{item}</span>
                 ))}</div>
-              <p className="text-sm text-[rgb(190,190,190)] mt-1">{proj.description}</p>
+              <p className="text-md text-[rgb(190,190,190)] mt-2">{proj.description}</p>
             </div>
           </div>
         ))}

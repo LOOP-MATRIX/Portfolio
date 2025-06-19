@@ -2,8 +2,8 @@ import React from 'react';
 
 const Experience = () => {
   return (
-    <section className="py-8 px-4 md:px-8 lg:px-16  min-h-screen flex items-center justify-center">
-      <div className="max-w-3xl w-full">
+    <section className="w-full lg:w-7/9 xl:w-5/9 px-2 md:px-0 py-12 flex flex-col items-center justify-center">
+      
         <h2 className="text-3xl md:text-4xl font-bold  mb-8 tracking-tight">
           Experience
         </h2>
@@ -35,7 +35,6 @@ const Experience = () => {
             </li>
           </ul>
         </div>
-      </div>
     </section>
   );
 };

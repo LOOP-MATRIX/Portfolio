@@ -17,10 +17,10 @@ const About = () => {
   ];
 
   return (
-    <section className=" text-white min-h-screen flex flex-col items-center justify-center py-12 px-4 md:px-8">
-      <div className="max-w-3xl w-full animate-[fadeIn_0.8s_ease-in-out_forwards]">
+    <section className=" text-white flex flex-col items-center justify-center py-12 px-4 md:px-8">
+      <div className="w-full lg:w-7/9 xl:w-5/9  animate-[fadeIn_0.8s_ease-in-out_forwards]">
         {/* About Me Header */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
+        <h2 className="text-4xl  font-bold mb-6 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
           About Me
         </h2>
 
