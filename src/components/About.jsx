@@ -2,18 +2,22 @@ import React from 'react';
 
 const About = () => {
   const skills = [
-    'MongoDB',
-    'Express.js',
-    'React',
-    'Node.js',
+    'HTML',
+    'CSS',
+    'Tailwind CSS',
     'JavaScript',
     'Python',
-    'Tailwind CSS',
+    'React',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
     'RESTful APIs',
+    'Redux',
+    'Zustand',
+    'Socket.io',
+    'JWT',
     'Git',
     'Github',
-    'HTML',
-    'CSS'
   ];
 
   return (
