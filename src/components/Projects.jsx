@@ -1,17 +1,19 @@
 import React from 'react';
 import mauli from '../assets/mauli.png'
+import pulselink from '../assets/pulselink.jpg'
 import ayurveda from '../assets/ayurveda.png'
 import bachatgat from '../assets/bachatgat.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
-  // {
-  //   title: "SafeArea",
-  //   img: null,
-  //   link: "#",
-  //   stack: ['React', 'Nodejs', 'MongoDB', 'TailwindCSS'],
-  //   description: "Developed a community-driven crime-reporting platform where users can post crime incidents with location and details. Other users can view these on a map to assess safety before relocating or buying property."
-  // },
+  {
+    title: "PulseLink",
+    ref:'personal',
+    img: pulselink,
+    link: "https://pulselink-one.vercel.app",
+    stack: ['React', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Socket.io', 'Zustand', 'Tailwind CSS'],
+    description: "Built a social platform with real-time chat and posts."
+  },
   {
     title: "Mauli Business",
     ref:'codehub',

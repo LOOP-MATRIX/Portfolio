@@ -10,6 +10,15 @@ const Profile = ({ setcontact }) => {
 
   let size = 22
 
+  const handleDownload = () => {
+  const link = document.createElement('a');
+  link.href = 'public/Omkar_Sutar_Resume.pdf'; // path to your file (in public folder)
+  link.download = 'Omkar_Sutar_Resume.pdf'; // name of file to download
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
   let styletl = ' hover:rounded-full hover:bg-gray-600 hover:h-9 hover:w-9 hover:p-[5px] transition-all duration-300 ease-in-out'
   return (
     <div className='w-full lg:w-7/9 xl:w-5/9 flex flex-col-reverse gap-8 md:flex-row items-center md:justify-evenly px-8 py-10 '>
@@ -33,7 +42,7 @@ const Profile = ({ setcontact }) => {
           <a href="https://www.linkedin.com/in/omkar-sutar-251656296/" target='_blank'><AiOutlineLinkedin fontSize={size} className={styletl} /></a>
           <a href="https://github.com/LOOP-MATRIX" target='_blank'><VscGithub fontSize={size} className={styletl} /></a>
           <div className='border-r-1 h-3/5 mx-2' />
-          <button className='border border-gray-600 rounded-sm flex justify-center items-center px-2 py-1  hover:shadow-md hover:shadow-gray-600 hover:scale-103 transition-all duration-300 ease-in-out'><MdFileDownload /> Resume</button>
+          <button onClick={()=>handleDownload()} className='border border-gray-600 rounded-sm flex justify-center items-center px-2 py-1  hover:shadow-md hover:shadow-gray-600 hover:scale-103 transition-all duration-300 ease-in-out'><MdFileDownload /> Resume</button>
         </div>
         <button onClick={() => { setcontact(true) }} className=' rounded-sm flex justify-center items-center px-2 py-1 bg-gray-900 hover:shadow-md hover:shadow-gray-600 hover:scale-103 hover:bg-gray-800 transition-all duration-300 ease-in-out'>Get In Touch</button>
       </div>

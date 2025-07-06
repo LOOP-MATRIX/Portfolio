@@ -30,7 +30,7 @@ const About = () => {
 
         {/* Description */}
         <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-8 text-center">
-          Full stack MERN developer with 6 months of experience, completing multiple projects with strong backend expertise in Node.js, Express.js, and MongoDB. Skilled in RESTful APIs and React, with a focus on optimizing application performance and scalability.
+          Full stack MERN developer with 6 months of experience, delivering 3+ projects, including an online education platform, using Node.js, Express.js, and MongoDB. Skilled in building RESTful APIs and React frontends, achieving up to 10% performance improvements through optimized database queries and API enhancements.
         </p>
 
         {/* Skills Section */}
