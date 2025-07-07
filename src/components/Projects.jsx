@@ -54,6 +54,7 @@ const Projects = () => {
                 className='w-full h-full object-cover rounded'
               />
             </div>
+
             <div className="ml-4 flex flex-col justify-center gap-2">
               <div className='flex items-center gap-2'>
                 <p className='text-xl md:text-2xl font-semibold'>{proj.title}</p>
@@ -71,6 +72,7 @@ const Projects = () => {
               <p className="text-md text-[rgb(190,190,190)] mt-2">{proj.description}</p>
             </div>
           </div>
+          
         ))}
       </div>
     </section>

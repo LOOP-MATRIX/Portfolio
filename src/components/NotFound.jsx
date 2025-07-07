@@ -6,9 +6,9 @@ const NotFound = () => {
 
     setInterval(() => {
         navigate('/')
-    }, 500);
+    }, 300);
   return (
-    <div>Redirecting....</div>
+    <div>Redirecting...</div>
   )
 }
 
