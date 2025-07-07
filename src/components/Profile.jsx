@@ -5,6 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 import { MdFileDownload } from "react-icons/md";
+import profile from '../assets/profile pic.png'
 
 const Profile = ({ setcontact }) => {
 
@@ -47,7 +48,7 @@ return (
       </div>
       <button onClick={() => { setcontact(true) }} className=' rounded-sm flex justify-center items-center px-2 py-1 bg-gray-900 hover:shadow-md hover:shadow-gray-600 hover:scale-103 hover:bg-gray-800 transition-all duration-300 ease-in-out'>Get In Touch</button>
     </div>
-    <img src={img} alt="Profile Image" className='w-40 h-40 border rounded-lg' />
+    <img src={profile} alt="Profile Image" className='w-40 h-40 border rounded-lg object-cover' />
 
 
   </div>
