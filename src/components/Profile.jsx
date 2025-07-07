@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { VscGithub } from "react-icons/vsc";
 import { MdFileDownload } from "react-icons/md";
-import profile from '../assets/profile pic.png'
+import profile from '../assets/profile pic shirt (1).jpg'
 
 const Profile = ({ setcontact }) => {
 
