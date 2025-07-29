@@ -1,8 +1,18 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Experience = () => {
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
+
+
   return (
-    <section className="w-full lg:w-7/9 xl:w-5/9 px-2 md:px-0 py-12 flex flex-col items-center justify-center">
+    <section className="w-full lg:w-7/9 xl:w-5/9 px-2 md:px-0 py-12 flex flex-col items-center justify-center" data-aos="fade-up">
 
       <h2 className="text-3xl md:text-4xl font-bold  mb-8 tracking-tight">
         Experience

@@ -1,9 +1,11 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import mauli from '../assets/mauli.png'
 import pulselink from '../assets/pulselink.jpg'
 import ayurveda from '../assets/ayurveda.png'
 import bachatgat from '../assets/bachatgat.png'
 import { FaExternalLinkAlt } from "react-icons/fa";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const projects = [
   {
@@ -41,8 +43,15 @@ const projects = [
 ];
 
 const Projects = () => {
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
+
   return (
-    <section className="p-4 md:p-6 w-full lg:w-7/9 xl:w-5/9 flex flex-col justify-center items-center">
+    <section className="p-4 md:p-6 w-full lg:w-7/9 xl:w-5/9 flex flex-col justify-center items-center" data-aos="fade-up">
       <h2 className="text-4xl font-bold mb-8 ">Projects </h2>
       <div className="w-full space-y-4 ">
         {projects.map((proj, index) => (

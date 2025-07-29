@@ -1,8 +1,17 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Education = () => {
+useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
-    <section className="flex flex-col w-full lg:w-7/9 xl:w-5/9  py-12 items-center justify-center">
+    <section className="flex flex-col w-full lg:w-7/9 xl:w-5/9  py-12 items-center justify-center" data-aos="fade-up">
       <h2 className="text-3xl md:text-4xl font-bold  mb-8 tracking-tight">
         Education
       </h2>

@@ -1,6 +1,15 @@
-import React from 'react';
+import React,{useEffect} from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, []);
+  
   const skills = [
     'HTML',
     'CSS',
@@ -21,7 +30,7 @@ const About = () => {
   ];
 
   return (
-    <section className=" text-white flex flex-col items-center justify-center py-12 px-4 md:px-8">
+    <section className=" text-white flex flex-col items-center justify-center py-12 px-4 md:px-8" data-aos="fade-up">
       <div className="w-full lg:w-7/9 xl:w-5/9  animate-[fadeIn_0.8s_ease-in-out_forwards]">
         {/* About Me Header */}
         <h2 className="text-4xl  font-bold mb-6 text-center bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">
@@ -40,9 +49,10 @@ const About = () => {
             {skills.map((skill, index) => (
               <div
                 key={index}
-                className="group flex justify-center items-center bg-gray-800 rounded-lg p-3 hover:bg-gray-700 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
+                className=" group flex justify-center items-center  rounded-lg p-[2px] hover:bg-gray-700 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300"
+                style={{ background: "linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%)" }}
               >
-                <span className="text-base md:text-lg font-medium text-gray-200 group-hover:text-white">
+                <span className=" bg-black w-full h-full py-2 rounded-lg flex justify-center items-center text-base md:text-lg font-medium text-gray-200 group-hover:text-white">
                   {skill}
                 </span>
               </div>
