@@ -71,7 +71,7 @@ const Home = () => {
         </section>
       </div>
       {contactus && (
-        <div className="fixed top-[50%] left-[50%] translate-x-[-50%] text-white translate-y-[-50%] w-[60vh] h-[50vh] rounded-lg backdrop-blur-sm flex flex-col border border-gray-600 items-center z-50 px-8 justify-evenly">
+        <div className="fixed top-[50%] left-[50%] translate-x-[-50%] text-white translate-y-[-50%] w-[40vh] h-[50vh] md:w-[60vh] md:h-[50vh] rounded-lg backdrop-blur-sm flex flex-col border border-gray-600 items-center z-50 px-8 justify-evenly">
           <div className='flex w-full justify-end'>
             <button className='text-xl hover:text-red-500' onClick={() => {setcontactus(false)}}>x</button>
           </div>
