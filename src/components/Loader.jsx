@@ -16,7 +16,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setGreet((prev) => (prev + 1) % greetings.length)
-    }, 750) 
+    }, 600) 
 
     return () => clearInterval(interval) 
   }, [greetings.length])

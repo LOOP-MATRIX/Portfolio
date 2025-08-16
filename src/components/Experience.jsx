@@ -12,9 +12,9 @@ const Experience = () => {
 
 
   return (
-    <section className="w-full lg:w-7/9 xl:w-5/9 px-2 md:px-0 py-12 flex flex-col items-center justify-center" data-aos="fade-up">
+    <section className="w-full lg:w-7/9 xl:w-5/9 text-left px-2 md:px-0 py-12 flex flex-col items-center justify-center" data-aos="fade-up">
 
-      <h2 className="text-3xl md:text-4xl font-bold  mb-8 tracking-tight">
+      <h2 className="text-3xl text-left font-medium  mb-8 ">
         Experience
       </h2>
       <div className=" rounded-xl  p-6 md:p-8 border hover:shadow-[rgb(77,85,122)] hover:border-[rgb(77,85,122)] hover:scale-101
@@ -33,17 +33,17 @@ const Experience = () => {
         <ul className="mt-4 space-y-3 text-gray-300 text-sm md:text-base">
           <li className="flex items-start">
             <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            Built MERN stack applications with RESTful APIs (Node.js, Express.js, MongoDB) and responsive React frontends
-            using Tailwind CSS for authentication and visualization.
+            <code>Built MERN stack applications with RESTful APIs (Node.js, Express.js, MongoDB) and responsive React frontends
+            using Tailwind CSS for authentication and visualization.</code>
           </li>
           <li className="flex items-start">
             <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            Optimized APIs with MongoDB indexing and chunked streaming, achieving 10% faster response times, using MVC
-            architecture for modularity.
+            <code>Optimized APIs with MongoDB indexing and chunked streaming, achieving 10% faster response times, using MVC
+            architecture for modularity.</code>
           </li>
           <li className="flex items-start">
             <span className="w-2 h-2 bg-indigo-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-            Implemented JWT and Bcrypt authentication with role-based access for admin and user functionalities.
+            <code>Implemented JWT and Bcrypt authentication with role-based access for admin and user functionalities.</code>
           </li>
         </ul>
       </div>

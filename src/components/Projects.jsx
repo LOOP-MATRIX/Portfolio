@@ -74,11 +74,11 @@ const Projects = () => {
                 }
                 <a href={proj.link} target='_blank'><FaExternalLinkAlt fontSize={14}/></a>
                 </div>
+              <p className="text-md text-[rgb(190,190,190)] mt-2">{proj.description}</p>
               <div className="text-sm text-white italic flex gap-2 flex-wrap">{
                 proj.stack.map((item, index) => (
-                  <span key={index} className='px-[8px] text-[12px] text-gray-200 py-[2px] bg-gray-800 rounded-xl'>{item}</span>
+                  <span key={index} className='px-[8px] text-[12px] text-gray-200 py-[2px] border border-gray-800 bg-gray-950 rounded-xl'>{item}</span>
                 ))}</div>
-              <p className="text-md text-[rgb(190,190,190)] mt-2">{proj.description}</p>
             </div>
           </div>
           
